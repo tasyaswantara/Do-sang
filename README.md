@@ -9,7 +9,7 @@
 
 - Clone the Repository
 ~~~bash  
-  git clone https://github.com/username/repository.git
+  git clone https://github.com/tasyaswantara/Do-sang.git
 ~~~
 
 - Enter the target directory
