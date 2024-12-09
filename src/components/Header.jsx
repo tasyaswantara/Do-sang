@@ -1,18 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import scrollService from "../services/ScrollService";
 
-const Header = () => (
-  <header className="bg-yellow-400 p-4 shadow-md">
-    <nav className="flex justify-between items-center">
-      <h1 className="text-2xl font-bold">Do-Sang Chips</h1>
-      <ul className="flex space-x-4">
-        <li><Link to="/" className="hover:text-gray-700">Home</Link></li>
-        <li><Link to="/about" className="hover:text-gray-700">Tentang</Link></li>
-        <li><Link to="/catalog" className="hover:text-gray-700">E-Katalog</Link></li>
-        <li><Link to="/contact" className="hover:text-gray-700">Hubungi</Link></li>
-      </ul>
-    </nav>
-  </header>
-);
+const Header = () => {
+  return (
+    <header className="bg-[#5A2B2B] text-white py-6 sticky top-0 z-50">
+      <nav className="container mx-auto flex justify-center items-center">
+        <ul className="flex space-x-10 text-brown-600 font-medium">
+          <li>
+            <button
+              onClick={() => scrollService.scrollToSection("home")}
+              className="hover:underline"
+            >
+              Beranda
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => scrollService.scrollToSection("katalog")}
+              className="hover:underline"
+            >
+              Katalog
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => scrollService.scrollToSection("kontak")}
+              className="hover:underline"
+            >
+              Kontak
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
 export default Header;

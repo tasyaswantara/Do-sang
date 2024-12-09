@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
+import Katalog from "../components/Katalog";
+import Hero from "../components/Hero";
+import Teaser from "../components/Teaser";
 
 const Home = () => (
-  <div className="p-6 text-center">
-    <h2 className="text-3xl font-bold">Selamat Datang di Do-Sang Chips</h2>
-    <p className="mt-4">Nikmati Keripik Pisang Lezat dengan Berbagai Varian Rasa!</p>
-  </div>
+  <>
+    <Hero />
+    <Teaser />
+    <Katalog />
+  </>
 );
 
 export default Home;
