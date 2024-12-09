@@ -2,6 +2,7 @@ import React from "react";
 import Pisang from "../assets/image/pisang.jpeg";
 import Wa from "../assets/icon/wa.png";
 import FacadeService from "../services/FacadeService";
+import scrollService from "../services/ScrollService";
 
 const Footer = () => {
   const waLink = FacadeService.generateWhatsAppLink(
@@ -42,22 +43,22 @@ const Footer = () => {
             <h3 className="text-lg font-bold text-white mb-4">Jelajahi</h3>
             <ul>
               <li>
-                <a href="#home" className="text-gray-200 hover:text-gray-100">
+                <a onClick={() => scrollService.scrollToSection("home")} className="text-gray-200 hover:text-gray-100 cursor-pointer">
                   Beranda
                 </a>
               </li>
               <li>
                 <a
-                  href="#catalog"
-                  className="text-gray-200 hover:text-gray-100"
+                  onClick={() => scrollService.scrollToSection("katalog")}
+                  className="text-gray-200 hover:text-gray-100 cursor-pointer"
                 >
                   Katalog
                 </a>
               </li>
               <li>
                 <a
-                  href="#contact"
-                  className="text-gray-200 hover:text-gray-100"
+                  onClick={() => scrollService.scrollToSection("kontak")}
+                  className="text-gray-200 hover:text-gray-100 cursor-pointer"
                 >
                   Kontak
                 </a>
